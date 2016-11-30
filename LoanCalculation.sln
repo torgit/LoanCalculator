@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanCalculation", "LoanCalculation\LoanCalculation.csproj", "{CACFA8B1-0F69-4A1F-B8DA-35AAB1F289E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{64059FB0-5F9F-4D96-8D69-53D7CD670C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{057E6FA6-F50B-4376-B882-AC3E103DD67B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CACFA8B1-0F69-4A1F-B8DA-35AAB1F289E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CACFA8B1-0F69-4A1F-B8DA-35AAB1F289E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CACFA8B1-0F69-4A1F-B8DA-35AAB1F289E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CACFA8B1-0F69-4A1F-B8DA-35AAB1F289E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64059FB0-5F9F-4D96-8D69-53D7CD670C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64059FB0-5F9F-4D96-8D69-53D7CD670C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64059FB0-5F9F-4D96-8D69-53D7CD670C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64059FB0-5F9F-4D96-8D69-53D7CD670C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{057E6FA6-F50B-4376-B882-AC3E103DD67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057E6FA6-F50B-4376-B882-AC3E103DD67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057E6FA6-F50B-4376-B882-AC3E103DD67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057E6FA6-F50B-4376-B882-AC3E103DD67B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

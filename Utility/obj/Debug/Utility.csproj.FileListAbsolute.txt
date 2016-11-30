@@ -1,0 +1,5 @@
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Utility\bin\Debug\Utility.dll
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Utility\bin\Debug\Utility.pdb
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Utility\obj\Debug\Utility.dll
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Utility\obj\Debug\Utility.pdb
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Model\bin\Debug\Model.dll
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Model\bin\Debug\Model.pdb
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Model\obj\Debug\Model.dll
+c:\users\suphaphong\documents\visual studio 2015\Projects\LoanCalculation\Model\obj\Debug\Model.pdb
