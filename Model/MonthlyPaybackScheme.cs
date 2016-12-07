@@ -8,23 +8,37 @@ namespace Model
 {
     class MonthlyPaybackScheme : PaybackScheme
     {
-        public override string generatePlan(LoanType loanType, double amount, double years)
+        public override List<Result> generatePlan(LoanType loanType, double amount, double years)
         {
+            var resultList = new List<Result>();
             var numberOfPaymentInMonths = years * 12;
-            var monthlyInterestRate = (loanType.InterestRate / 100) / 12;
-            var onePlusMonthlyInterestRatePowered = Math.Pow(1 + Convert.ToDouble(monthlyInterestRate), numberOfPaymentInMonths);
+            var effectiveInterestRate = calculateEffectiveRate(loanType.InterestRate, 12);
+            var monthlyInterestRate = (effectiveInterestRate / 100) / 12;
 
-            this.planDescription = PaybackPlanDescription.Monthly;
-            this.paybackPerUnit = amount * (monthlyInterestRate * onePlusMonthlyInterestRatePowered) / (onePlusMonthlyInterestRatePowered - 1);
+            this.paybackPerUnit = calculatePayment(amount, monthlyInterestRate, numberOfPaymentInMonths);
             this.totalInterest = paybackPerUnit * numberOfPaymentInMonths - amount;
 
-            var result = String.Format("{0} payment = {1}\ntotal interest = {2}", planDescription, numericToPrintFormat(paybackPerUnit), numericToPrintFormat(totalInterest));
-            return result;
+            var currentPrincipal = amount;
+            for(int i = 0; i < numberOfPaymentInMonths; i++)
+            {
+                var currentInterest = currentPrincipal * monthlyInterestRate;
+                var newResult = new Result(currentPrincipal, paybackPerUnit, currentInterest, String.Format("Month {0}", i+1));
+                resultList.Add(newResult);
+                currentPrincipal += currentInterest;
+                currentPrincipal -= paybackPerUnit;
+            }
+
+            return resultList;
         }
 
-        private string numericToPrintFormat(double number)
+        private double calculateEffectiveRate(double statedRate, int compoundingPeriod)
         {
-            return String.Format("{0:n}", number);
+            return Math.Pow(1+statedRate/compoundingPeriod, compoundingPeriod)-1;
+        }
+
+        private double calculatePayment(double principal, double interestRate, double paymentPeriod)
+        {
+            return (principal * interestRate * Math.Pow(1 + interestRate, paymentPeriod)) / (Math.Pow(1 + interestRate, paymentPeriod)-1);
         }
     }
 }

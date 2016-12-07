@@ -84,7 +84,8 @@ namespace LoanCalculation
                 var paymentObject = Activator.CreateInstance(paymentSchemeType) as PaybackScheme;
 
                 var result = paymentObject.generatePlan(loanType, amount, years);
-                MessageBox.Show(String.Format("Payback plan\n{0}", result));
+
+                dataGrid_result.ItemsSource = result;
             }
             else
             {
